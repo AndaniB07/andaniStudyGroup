@@ -13,15 +13,17 @@
         <th>@Html.DisplayNameFor(model => model.FirstName) </th>
         <th>@Html.DisplayNameFor(model => model.LastName) </th>
         <th>@Html.DisplayNameFor(model => model.EmailAddress) </th>
+        <th>@Html.DisplayNameFor(model => model.myLink) </th>
     </tr>
 
     @foreach (var item in Model)
             {
                <tr>
-                   <th>@Html.DisplayFor(model => item.StudentNo) </th>
-                   <th>@Html.DisplayFor(model => item.FirstName) </th>
-                   <th>@Html.DisplayFor(model => item.LastName) </th>
-                   <th>@Html.DisplayFor(model => item.EmailAddress) </th>
+                   <td>@Html.DisplayFor(model => item.StudentNo) </td>
+                   <td>@Html.DisplayFor(model => item.FirstName) </td>
+                   <td>@Html.DisplayFor(model => item.LastName) </td>
+                   <td>@Html.DisplayFor(model => item.EmailAddress) </td>
+                   <td> <a href="@Url.Content(item.myLink)">Link</a></td>
                </tr>
             }
 </table>
